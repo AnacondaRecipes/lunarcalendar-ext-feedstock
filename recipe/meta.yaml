@@ -13,19 +13,22 @@ source:
     - 0001-add-version-var.patch
 
 build:
+  skip: True  # [py==312]
   number: 0
-  noarch: python
   entry_points:
     - lunar-find=lunarcalendar.command:find
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
+  build:
+    - patch
   host:
     - pip
-    - python >=3.7
+    - python
+    - wheel
   run:
     - ephem >=3.7.5.3
-    - python >=3.7
+    - python
     - python-dateutil >=2.6.1
     - pytz
 
@@ -47,7 +50,11 @@ about:
   home: https://github.com/KaixuYang/LunarCalendar-extension
   summary: A bugfix fork of LunarCalendar, a Lunar-Solar calendar converter.
   license: MIT
+  license_family: MIT
   license_file: LICENSE
+  description: This repo forks the [LunarCalendar](https://github.com/wolfhong/LunarCalendar) repo and fixes some bugs.
+  dev_url: https://github.com/KaixuYang/LunarCalendar-extension/tree/888497987ffe7fecca94f544c03e5685f806d828
+  doc_url: https://github.com/wolfhong/LunarCalendar/blob/master/README.rst
 
 extra:
   recipe-maintainers:
