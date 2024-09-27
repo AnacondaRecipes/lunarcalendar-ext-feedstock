@@ -28,7 +28,8 @@ requirements:
     - python
     - wheel
   run:
-    - ephem >=3.7.5.3,<4.1.*
+    - ephem >=3.7.5.3  # [not osx]
+    - ephem 3.7.5.3  # [osx]
     - python
     - python-dateutil >=2.6.1
     - pytz
