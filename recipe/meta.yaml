@@ -29,7 +29,7 @@ requirements:
     - wheel
   run:
     - ephem >=3.7.5.3  # [not arm64]
-    - ephem >=3.7.5.3,<4.*  # [arm64]
+    - ephem 3.7.7  # [arm64]
     - python
     - python-dateutil >=2.6.1
     - pytz
