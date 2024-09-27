@@ -13,7 +13,7 @@ source:
     - 0001-add-version-var.patch
 
 build:
-  skip: True  # [py==312 or s390x]
+  skip: True  # [py==312 or s390x or (py>310 and osx)]
   number: 0
   entry_points:
     - lunar-find=lunarcalendar.command:find
