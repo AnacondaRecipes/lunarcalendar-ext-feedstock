@@ -55,7 +55,7 @@ about:
   license_family: MIT
   license_file: LICENSE
   description: This repo forks the [LunarCalendar](https://github.com/wolfhong/LunarCalendar) repo and fixes some bugs.
-  dev_url: https://github.com/KaixuYang/LunarCalendar-extension/tree/888497987ffe7fecca94f544c03e5685f806d828
+  dev_url: https://github.com/KaixuYang/LunarCalendar-extension
   doc_url: https://github.com/wolfhong/LunarCalendar/blob/master/README.rst
 
 extra:
