@@ -13,7 +13,7 @@ source:
     - 0001-add-version-var.patch
 
 build:
-  skip: True  # [py==312 or s390x or (py>39 and arm64)]
+  skip: True  # [s390x]
   number: 0
   entry_points:
     - lunar-find=lunarcalendar.command:find
@@ -28,8 +28,7 @@ requirements:
     - python
     - wheel
   run:
-    - ephem >=3.7.5.3  # [not arm64]
-    - ephem 3.7.7  # [arm64]
+    - ephem >=3.7.5.3
     - python
     - python-dateutil >=2.6.1
     - pytz
