@@ -23,6 +23,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
     - wheel
   run:
     - ephem >=3.7.5.3
