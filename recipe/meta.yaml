@@ -14,15 +14,12 @@ source:
 
 build:
   skip: True  # [s390x]
-  number: 0
+  number: 1
   entry_points:
     - lunar-find=lunarcalendar.command:find
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
-  build:
-    - patch  # [not win]
-    - m2-patch  # [win]
   host:
     - pip
     - python
